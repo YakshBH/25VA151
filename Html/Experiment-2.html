@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple News Hub</title>
+    <style>
+        /* Basic CSS for layout and style */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-image: url("bg4.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: center,top;
+            background-color: #004d99; /* Dark Blue */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            display: flex; /* Flexbox for layout */
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .main-content, .sidebar {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-content {
+            flex: 2; /* Takes up more space */
+            min-width: 60%;
+        }
+
+        .sidebar {
+            flex: 1; /* Takes up less space */
+            min-width: 300px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+            color: #004d99;
+        }
+
+        .video-embed {
+            margin-top: 15px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        /* Responsive video container for maintaining aspect ratio */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio (9/16 * 100) */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>📰 Global News Today</h1>
+        <p>Your source for reliable updates.</p>
+    </header>
+
+    <nav>
+        <a href="#sports">Sports</a>
+        <a href="#entertainment">Entertainment</a>
+        <a href="#world-news">World News</a>
+        <a href="#technology">Technology</a>
+    </nav>
+
+    <div class="container">
+
+        <section class="main-content">
+            <h2 id="sports">Latest Sports Updates</h2>
+            <article>
+                <h4>Asia Cup Final: Tilak seals thriller to give India ninth Asia Cup title 🏆</h4>
+                <p>
+                    The Asia Cup final went down to the wire as Tilak calmly helped India chase down 147.
+                </p>
+                <h3>Featured Video </h3>
+            <div class="video-embed">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YXKAk6EbE3Y?si=2GmLmBYkMJOUlmFP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                
+                <p style="margin-top: 10px; font-style: italic;">Tilak Varma celebrates a tense victory.</p>
+            </div>
+                    </iframe>
+                </div>
+            </article>
+        </section>
+
+        <div class="container">
+
+        <section class="main-content">
+            <h2 id="sports">Entertainment</h2>
+            <article>
+                <h3>Kantara: Chapter 1' box office collection day 15 (LIVE): The Rishab Shetty starrer records a single digit number for the first time, crosses Rs 480 crore</h3>
+                <p>
+                   ‘Kantara: Chapter 1’, written, directed and headlined by Rishab Shetty, has completed its second weekend in theatres with strong momentum at the box office. Despite clashing with ‘Sunny Sanskari Ki Tulsi Kumari’, the film continues to dominate by a massive margin. Its wider release across Hindi, Tamil, Telugu, Malayalam, and Kannada markets has further boosted its rea
+               </p>
+                <h3>Featured Video </h3>
+            <div class="video-embed">
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/uuTyBmqwNbc?si=02beP15JSRMPNiy2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                <p style="margin-top: 10px; font-style: italic;">'Kantara Chapter 1' Becomes India’s 12th Biggest Hit, Beats 'Baahubali' In 11 Days
+            </div>
+                    </iframe>
+                </div>
+            </article>
+        </section>
+
+        
+
+        <aside class="sidebar">
+            <h2 id="world-news">More News</h2>
+
+            <article>
+                <h4>World News: Global Climate Summit Opens</h4>
+                <p>
+                    Leaders from over 50 nations have convened to discuss new global targets for carbon emissions, focusing on renewable energy investments.
+                </p>
+            </article>
+
+            <hr>
+
+            <article>
+                <h4 id="entertainment">Entertainment: New Blockbuster Breaks Records</h4>
+                <p>
+                    The highly anticipated sci-fi movie, 'Cosmic Journey', has dominated the box office in its opening weekend, setting a new record for the month of October.
+                </p>
+            </article>
+
+            <hr>
+
+            <article>
+                <h4 id="technology">Technology: AI Integration in Smartphones</h4>
+                <p>
+                    The new 'TechCo' phone update introduces deep AI integration for photo editing and voice commands, promising a revolutionary user experience.
+                </p>
+            </article>
+        </aside>
+
+    </div>
+
+    <footer>
+        <p style="text-align: center; padding: 10px; background-color: #333; color: white; margin-top: 20px;">
+            &copy; 2025 Simple News Hub. All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
