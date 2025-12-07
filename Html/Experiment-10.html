@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Store</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #212121;
+            color: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .navbar {
+            background-color: #333; 
+            color: white;
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            padding: 15px 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-brand {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #ff9900; 
+        }
+
+        .navbar-links {
+            list-style: none;
+            display: flex; 
+        }
+
+        .navbar-links li {
+            margin-left: 25px;
+        }
+
+        .navbar-links a {
+            padding: 8px 10px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-links a:hover {
+            color: #ff9900;
+        }
+
+        .menu-toggle {
+            display: none; 
+            font-size: 2em;
+            line-height: 0; 
+        }
+
+        .content {
+            padding: 20px 30px;
+            text-align: center;
+        }
+
+        .content h1 {
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 10px 20px;
+            }
+
+            .navbar-links {
+                display: none; 
+                flex-direction: column; 
+                width: 100%;
+                background-color: #444; 
+                position: absolute;
+                top: 60px; 
+                left: 0;
+                padding: 10px 0;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            }
+
+            .navbar-links.active {
+                display: flex;
+            } 
+
+            .navbar-links li {
+                margin: 0;
+                text-align: center;
+                border-bottom: 1px solid #555;
+            }
+
+            .navbar-links li:last-child {
+                border-bottom: none;
+            }
+
+            .navbar-links a {
+                display: block; 
+                padding: 15px 0;
+            }
+
+            .menu-toggle {
+                display: block; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-brand">
+            🐹GO HAMSTER
+        </div>
+        
+        <ul class="navbar-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#account">Account</a></li>
+            <li><a href="#cart">Cart (0)</a></li>
+        </ul>
+
+        <div class="menu-toggle" id="menuToggle">
+            &#9776; </div>
+    </nav>
+
+    <div class="content">
+        <h1>Welcome to Our E-commerce Store!</h1>
+    </div>
+
+    <script>
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            var navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
